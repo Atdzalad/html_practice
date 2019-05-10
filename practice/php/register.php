@@ -7,19 +7,19 @@
 <body>
  
     <marquee direction="left">
-        Welcome for login
-
+        Welcome for register
     </marquee>
+
     <body align="center">
 
 
             <!--表格-->
             <blockquote>
                 <!--表单-->
-                <form method="POST" action="php/login.php">
-                    <ex1>账号：</ex1><input type="text" name="login_username" autofocus />
+                <form method="POST" action="php/register.php">
+                    <ex1>账号：</ex1><input type="text" name="username" autofocus />
                     <br/>
-                    <ex1>密码：</ex1><input type="password" name="login_password" />
+                    <ex1>密码：</ex1><input type="password" name="password" />
                     <br/>
                     <input type="submit" value="提交" />
                     <input type="reset" value="取消" />

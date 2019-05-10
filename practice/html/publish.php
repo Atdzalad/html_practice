@@ -1,28 +1,16 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
 <meta charset="UTF-8">
-        <head><title>Web新闻发布系统</title>
-            <script type="text/javascript">
-            //alert("Welcome!");
-            if(typeof(Storage)=="undefined")
-            {
-                //alert("您的浏览器不支持Web Storage")
-            }
-            else
-            {
-                //alert("您的浏览器支持Web Storage")
-            }
-            
-            </script>
-        
-        
+        <head>
+            <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+            <title>Web新闻发布系统</title>
         </head>
         <body>
         <div id="main">
+            
         <!--标题-->
         <header>
-            <h1 id="hd1"><center>Welcome To My First Website</center></h1>
-            <h1 id="hd2"><center>Welcome To My First Website</center></h1>
+            <h1 id="hd1">Web新闻发布系统</h1>
         </header>
         <!--标题-->
 
@@ -30,17 +18,14 @@
         <aside>
             <nav>
                 <ul>
-                    <li><a href="login.html">&nbsp&nbsp登录&nbsp&nbsp</a></li>
-                    <li><a href="register.html">&nbsp&nbsp注册&nbsp&nbsp</a></li>
-                    <li><a href="/index.html">回到首页</a></li>
-                    <li><a href="">最新新闻</a></li>
-                    <li><a href="">科技新闻</a></li>
-                    <li><a href="">社会新闻</a></li>
+                    <li><a href="../index.php">回到首页</a></li>
+                    <li><a href="pubilsh.php">发布新闻</a></li>
+                    <li><a href="manager.php">新闻管理</a></li>
+                    <li><a href="type.php">栏目管理</a></li>
                 </ul>
             </nav>
         </aside>
         <!--侧边栏-->
-
 
         <!--css-->
         <style type="text/css">
@@ -49,74 +34,63 @@
             top: 15px;
             position: absolute;
             font-size: 40px;
-            color: #FF0000;
-            margin-left: 50px;
-        }
+            color: rgb(255, 208, 0);
+            margin-left: 250px;
 
-        h1#hd2{
-            margin: 0px;padding: 5px;
-            position: absolute;
-            font-size: 30px;
-            color: #FFFFFF;
-            top: 30px;
-            margin-left: 150px;
-            z-index: 1;
-            filter: glow(color=#ff0000,strength=5);
-            text-shadow: 5px 5px 5px #FF0000;
         }
-
+        a{
+            text-decoration:none;
+        }
         body{
 
-            background-image: url(img/background.jpg);
+            background-image: url(../img/back.jpg);
             background-size: 100%;
             background-attachment:initial;
             margin: 0px;padding: 0;
             font-family: Arial, Helvetica, sans-serif;
         }
-
         #main{
             margin: 0px auto;
             width: 800px;
         }
-
         header{
             border: 1px #330000 solid;
             width: 800px;
             height: 80px;
-            background: #330000;
+            background: #3e3be6a1;
         }
-
         aside{
             width: 170px;
             float: left;
             height: 400px;
 
         }
-
         nav{
             border: 0px #000000 solid;
             margin: 0px auto;padding: 0px;
-            margin-top: 170px;
+            margin-top: 240px;
 
         }
-
+        a{
+            color:black;   
+        }
         article{
             border-right: 1px #330000 solid;
             width: 625px;
             margin-left: 175px;
-            height: 400px;
-            background: #FFFFFF;
+            height: 590px;
+            background: rgb(255, 255, 255);
+            overflow:auto;
+            background-color:rgba(100,37,38,0.2);
         }
-
         footer{
             border: 1px #330000 solid;
-            background: #330000;
+            background: #556ae0;
             color: #ffffff;
             width: 800px;height: 50px;
             text-align: center;
             line-height: 50px;
         }
-
         .consection{
             display: block;
             border: 0px #330000 solid;
@@ -124,30 +98,25 @@
             left: 10px;top: 10px;
             margin: 0px auto;padding: 20px;
         }
-
         fieldset{
             border: 1px solid;
             border-radius: 10px;
             -moz-border-radius:10px;
             -webkit-border-radius:10px;
         }
-
         fieldset legend{
             text-align: center;
             color: black;
         }
-
         div{
             font-size: 16px;
-            color: #ffffff;
+            color: #000000;
         }
-
         font.test{ 
             font-size: 16px;
             color: #ffffff;
             font-weight: bold;
         }
-        
         #font_bold{
             font-size: 24px;
             color: red;
@@ -155,42 +124,31 @@
             font-weight: bold;
             border: 1px #336699 solid;
         }
-
         td{
             font-size: 22px;
             color: black;
             font-weight: bold;
         }
-
         ex1{
             font-size: 22px;
             color: black;
             font-weight: bold;
             text-decoration: underline;
         }
-
         </style>
         <!--css-->
-
-        
             <article>
-                <section class="consection">
-                    <fieldset>
-                        <legend>通知</legend>
-                        关于我的网站<br>
-                    </fieldset>
-
-                </section>
-                <div class="consection">
-
-
-                </div>
+                <form method="post" action="insert.php">
+                    <br><br>
+                    新闻标题：<input Type="text" name="title">
+                    <br>
+                    新闻内容：<br><center><textarea name="body" rows="30" cols="80">
+                    </textarea></center>
+                    <center><input Type="submit"><input type="reset"></center>
+                </form>
             </article>
             <!--footer-->
             <footer>made by Atdzald in uestc</footer>
         </div>
-
         </body>
-
-    
 </html>
